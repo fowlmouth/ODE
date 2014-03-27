@@ -3,7 +3,7 @@ when defined(Linux):
 else:
   {.error: "Your platform has not been accounted for.".}
 
-import importc_block
+import fowltek/importc_block
 
 ## as of this moment, debian has a separate package for ODE built in single
 ## precision, otherwise you should know how you compiled ODE. Or you could
@@ -24,7 +24,7 @@ else:
 
 
 when defined(OdeUseVectorTypes):
-  import vector_math
+  import fowltek/vector_math
   type 
     TVector3d* = TVector3[dReal]
     TVector4d* = TVector4[dReal]
